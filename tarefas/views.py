@@ -5,7 +5,5 @@ def home (request):
   return render(request, "tarefas/home.html")
 
 def add_task(request):
-    task = "New Task"
-    return HttpResponse(task)
-
+    return render(request, "tarefas/adicionar.html")
 

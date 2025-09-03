@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{%block titulo%}Título Padrão{% endblock %}</title>
+</head>
+<body>
+    <header>
+      <h1>Cabeçalho</h1>
+        <nav>
+          <a href="/tarefas">Home</a>
+          <a href="/tarefas/add">Adicionar Tarefas</a>
+        </nav>
+        <hr>
+    </header>
+  
+  
+  
+    {% block corpo %}
+    {% endblock %}
+</body>
+</html>

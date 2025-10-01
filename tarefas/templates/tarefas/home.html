@@ -3,6 +3,25 @@
 {%block title%}Página Inicial{%endblock%}
 
 {%block corpo%}
-<h2>Cabeçalho do Site</h2>
-<p>Texto de Teste</p>
-{%endblock%}
+<h2>Página oficial das tarefas!</h2>
+
+{% if tarefas %}
+<ul>
+    {% for tarefa in tarefas %}
+    <li>
+        {{ tarefa.titulo }} - <strong> {% if tarefa.concluida %}
+            (Concluida)
+            {% else %}
+            (Pendente) 
+            {%endif%}
+
+    </strong>
+</li>
+    {% endfor %}
+</ul>
+{%else%}
+    <p>Não há tarefas cadastradas.</p>
+{% endif %}
+
+{% endblock %}
+

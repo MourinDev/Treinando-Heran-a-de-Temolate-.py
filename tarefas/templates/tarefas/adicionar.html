@@ -1,9 +1,10 @@
 {% extends 'tarefas/base.html' %}
-
-
-
+{% block title %}Adicionar Tarefa{% endblock %}
 {% block corpo %}
-<h1>Função para adicionar tasks</h1>
-<p>tarefa concluída com sucesso!</p>
-<button>Adicionar tasks</button>
+<h2>Telinha de Adicionar</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="next" value="{{ next }}">
+    <button type="submit">Adicionar Tarefa</button>
 {% endblock %}
